@@ -1,0 +1,9 @@
+{
+  "extends": "@oclif/tslint",
+  "rules": {
+    "semicolon": [
+      true,
+      "always"
+    ]
+  }
+}

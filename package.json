@@ -1,0 +1,70 @@
+{
+  "name": "@bchatard/mytools",
+  "description": "My daily tools (init, upgrade etc)",
+  "version": "0.0.1",
+  "author": "bchatard",
+  "bin": {
+    "mytools": "./bin/run"
+  },
+  "bugs": "https://github.com/bchatard/mytools/issues",
+  "dependencies": {
+    "@oclif/color": "0.0.0",
+    "@oclif/command": "^1.4.36",
+    "@oclif/config": "^1.6.33",
+    "@oclif/plugin-autocomplete": "^0.1.0",
+    "@oclif/plugin-help": "^2.0.5",
+    "@types/execa": "^0.9.0",
+    "@types/fs-extra": "^5.0.4",
+    "@types/inquirer": "0.0.42",
+    "@types/listr": "^0.13.0",
+    "@types/supports-color": "^5.3.0",
+    "execa": "^0.10.0",
+    "fs-extra": "^7.0.0",
+    "inquirer": "^6.0.0",
+    "listr": "^0.14.1",
+    "tslib": "^1.9.3"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.15.4",
+    "@oclif/tslint": "^1.1.2",
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.5.6",
+    "globby": "^8.0.1",
+    "ts-node": "^6.2.0",
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/bchatard/mytools",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "mytools",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "bchatard/mytools",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json npm-shrinkwrap.json",
+    "posttest": "tsc -p . --noEmit && tslint -p . -t stylish",
+    "prepack": "rm -rf lib && tsc && oclif-dev manifest && oclif-dev readme && npm shrinkwrap",
+    "prepare": "rm -rf lib && tsc",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
