@@ -5,5 +5,13 @@
       true,
       "always"
     ]
-  }
+  },
+  "ordered-imports": [
+    true,
+    {
+      "import-sources-order": "lowercase-first",
+      "named-imports-order": "lowercase-first",
+      "grouped-imports": true
+    }
+  ]
 }
