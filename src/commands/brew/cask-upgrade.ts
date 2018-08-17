@@ -3,7 +3,7 @@ import {CLIError} from '@oclif/errors';
 import * as execa from 'execa';
 import * as ora from 'ora';
 
-import Command from '../../common';
+import Command from '../../commons/base';
 
 export default class BrewCaskUpgrade extends Command {
   static description = 'Upgrade brew casks';

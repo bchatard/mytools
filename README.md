@@ -33,6 +33,9 @@ USAGE
 <!-- commands -->
 * [`mytools brew:cask-upgrade`](#mytools-brewcask-upgrade)
 * [`mytools help [COMMAND]`](#mytools-help-command)
+* [`mytools hosts:add IP HOSTS`](#mytools-hostsadd-ip-hosts)
+* [`mytools hosts:build`](#mytools-hostsbuild)
+* [`mytools hosts:del`](#mytools-hostsdel)
 
 ## `mytools brew:cask-upgrade`
 
@@ -65,4 +68,59 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.0/src/commands/help.ts)_
+
+## `mytools hosts:add IP HOSTS`
+
+Add new entry to your hosts configuration file
+
+```
+USAGE
+  $ mytools hosts:add IP HOSTS
+
+ARGUMENTS
+  IP     Server IP
+  HOSTS  Server Name / Domain (multiple separate by , (comma))
+
+OPTIONS
+  --help             show CLI help
+  --order=order      [default: 1] order section (organize your hosts)
+  --section=section  [default: global] hosts section (organize your hosts)
+  --verbose          verbose mode
+```
+
+_See code: [src/commands/hosts/add.ts](https://github.com/bchatard/mytools/blob/v0.0.1-alpha.2/src/commands/hosts/add.ts)_
+
+## `mytools hosts:build`
+
+Update the hosts file (and backup previous one)
+
+```
+USAGE
+  $ mytools hosts:build
+
+OPTIONS
+  --dry-run  do not build hosts
+  --help     show CLI help
+  --verbose  verbose mode
+```
+
+_See code: [src/commands/hosts/build.ts](https://github.com/bchatard/mytools/blob/v0.0.1-alpha.2/src/commands/hosts/build.ts)_
+
+## `mytools hosts:del`
+
+Delete entry to your hosts configuration file
+
+```
+USAGE
+  $ mytools hosts:del
+
+OPTIONS
+  --help             show CLI help
+  --hosts=hosts      server name / domain
+  --ip=ip            server IP
+  --section=section  [default: global] hosts section (organize your hosts)
+  --verbose          verbose mode
+```
+
+_See code: [src/commands/hosts/del.ts](https://github.com/bchatard/mytools/blob/v0.0.1-alpha.2/src/commands/hosts/del.ts)_
 <!-- commandsstop -->
