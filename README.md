@@ -22,7 +22,7 @@ $ npm install -g @bchatard/mytools
 $ mytools COMMAND
 running command...
 $ mytools (-v|--version|version)
-@bchatard/mytools/0.0.1-alpha.1 darwin-x64 node-v10.9.0
+@bchatard/mytools/0.0.1-alpha.2 darwin-x64 node-v10.9.0
 $ mytools --help [COMMAND]
 USAGE
   $ mytools COMMAND
@@ -47,7 +47,7 @@ OPTIONS
   --verbose  verbose mode
 ```
 
-_See code: [src/commands/brew/cask-upgrade.ts](https://github.com/bchatard/mytools/blob/v0.0.1-alpha.1/src/commands/brew/cask-upgrade.ts)_
+_See code: [src/commands/brew/cask-upgrade.ts](https://github.com/bchatard/mytools/blob/v0.0.1-alpha.2/src/commands/brew/cask-upgrade.ts)_
 
 ## `mytools help [COMMAND]`
 
