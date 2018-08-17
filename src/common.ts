@@ -1,5 +1,5 @@
 import color from '@oclif/color';
-import Command, { flags } from '@oclif/command';
+import Command, {flags} from '@oclif/command';
 
 export default abstract class extends Command {
   static flags = {
