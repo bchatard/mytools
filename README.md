@@ -20,7 +20,7 @@ $ npm install -g @bchatard/mytools
 $ mytools COMMAND
 running command...
 $ mytools (-v|--version|version)
-@bchatard/mytools/0.0.1-alpha.2 darwin-x64 node-v10.9.0
+@bchatard/mytools/0.0.1-alpha.3 darwin-x64 node-v10.9.0
 $ mytools --help [COMMAND]
 USAGE
   $ mytools COMMAND
@@ -48,7 +48,7 @@ OPTIONS
   --verbose  verbose mode
 ```
 
-_See code: [src/commands/brew/cask-upgrade.ts](https://github.com/bchatard/mytools/blob/v0.0.1-alpha.2/src/commands/brew/cask-upgrade.ts)_
+_See code: [src/commands/brew/cask-upgrade.ts](https://github.com/bchatard/mytools/blob/v0.0.1-alpha.3/src/commands/brew/cask-upgrade.ts)_
 
 ## `mytools help [COMMAND]`
 
@@ -86,7 +86,7 @@ OPTIONS
   --verbose          verbose mode
 ```
 
-_See code: [src/commands/hosts/add.ts](https://github.com/bchatard/mytools/blob/v0.0.1-alpha.2/src/commands/hosts/add.ts)_
+_See code: [src/commands/hosts/add.ts](https://github.com/bchatard/mytools/blob/v0.0.1-alpha.3/src/commands/hosts/add.ts)_
 
 ## `mytools hosts:build`
 
@@ -102,7 +102,7 @@ OPTIONS
   --verbose  verbose mode
 ```
 
-_See code: [src/commands/hosts/build.ts](https://github.com/bchatard/mytools/blob/v0.0.1-alpha.2/src/commands/hosts/build.ts)_
+_See code: [src/commands/hosts/build.ts](https://github.com/bchatard/mytools/blob/v0.0.1-alpha.3/src/commands/hosts/build.ts)_
 
 ## `mytools hosts:del`
 
@@ -120,5 +120,5 @@ OPTIONS
   --verbose          verbose mode
 ```
 
-_See code: [src/commands/hosts/del.ts](https://github.com/bchatard/mytools/blob/v0.0.1-alpha.2/src/commands/hosts/del.ts)_
+_See code: [src/commands/hosts/del.ts](https://github.com/bchatard/mytools/blob/v0.0.1-alpha.3/src/commands/hosts/del.ts)_
 <!-- commandsstop -->
