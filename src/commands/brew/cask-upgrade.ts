@@ -21,7 +21,7 @@ export default class BrewCaskUpgrade extends Command {
 
         return Promise.resolve(casks);
       })
-      .then(async (casks: string[]) => {
+      .then((casks: string[]) => {
         this.log('');
         if (casks.length === 0) {
           this.log('🎉 All your casks are already up to date.');
@@ -31,6 +31,7 @@ export default class BrewCaskUpgrade extends Command {
 
         this.log(`There is ${casks.length} casks to upgrade`);
         this.log('');
+        this.separator();
 
         for (const cask of casks) {
           const caskInfo: RegExpMatchArray | null = BrewCaskUpgrade.CASK_REGEXP.exec(cask);
@@ -40,7 +41,11 @@ export default class BrewCaskUpgrade extends Command {
 
             this.log(`Upgrade ${color.addon(caskName)} from ${color.dim(from)} to ${color.green(to)}`);
 
-            await execa.shell(`brew cask upgrade ${caskName}`, {stdio: ['pipe', process.stdout, process.stderr]});
+            try {
+              execa.shellSync(`brew cask upgrade ${caskName}`, {stdio: ['pipe', process.stdout]});
+            } catch (error) {
+              this.error(error.message, {exit: false});
+            }
 
           } else {
             this.warn(`Can't find cask name and versions in "${cask}"`);
