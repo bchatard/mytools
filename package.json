@@ -29,7 +29,7 @@
     "is-ip": "^2.0.0",
     "listr": "^0.14.1",
     "ora": "^3.0.0",
-    "tslib": "^1.9.3"
+    "tslib": "^1.14.1"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.17.0",
